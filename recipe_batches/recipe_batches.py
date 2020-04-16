@@ -3,7 +3,15 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+
+    for ingredient in ingredients:
+      if recipe.keys() == ingredients.keys():
+        if ingredients[ingredient] > recipe[ingredient]:
+          return math.floor(ingredients[ingredient] / recipe[ingredient])
+        else:
+          return 0
+      else:
+        return 0
 
 
 if __name__ == '__main__':
